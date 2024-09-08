@@ -12,7 +12,7 @@ const Home = () => {
   async function generateAnswer() {
     try {
       const response = await axios({
-        url: `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=AIzaSyBmfIVI2Z9euAXJ6aVFQD2rTWBBeg1h1qU`,
+        url: `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=${process.env.local.API_KEY}`,
         method: 'POST',
         data: {
           contents: [
